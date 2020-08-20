@@ -1,12 +1,17 @@
-const open = ({owner, repo, title, body}) => {
-  const octokit = new Octokit({
-    authStrategy: createAppAuth,
-    auth: {
-      id: 75833,
-      installationId: 11101003,
-      clientId: "Iv1.8d2f7d117f535668",
-      clientSecret: "06022b8c409a41c4fdf154c6478de80ffc4f2ddf",
-      privateKey: `-----BEGIN RSA PRIVATE KEY-----
+const { Octokit } = require("@octokit/core");
+const { createAppAuth } = require("@octokit/auth-app");
+
+const open = async ({owner, repo, title, body}) => {
+  try {    
+    console.log('opening issue')
+    const octokit = new Octokit({
+      authStrategy: createAppAuth,
+      auth: {
+        id: 75833,
+        installationId: 11101003,
+        clientId: "Iv1.8d2f7d117f535668",
+        clientSecret: "06022b8c409a41c4fdf154c6478de80ffc4f2ddf",
+        privateKey: `-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAzHiYgXEHhQ9xhvkHZmNINih76FpMivakGTc4D2ITDzvl/t4m
 B7YKlAdo2Y3I+Ov06FBBD5Pni4Jaz23Cq7/pg5CxgvueMmth2XW0ZffVA4oA7Yzo
 jBQ0/kcM2o0BFIKuHyNP5wQ8WKDU9HF5g1/lINh5IIKSfMN+zi5GfLeojVXYGrzx
@@ -33,14 +38,18 @@ mel7AJFfU1mgPHtfde5CtOjnTEc1QPO7W9xNTmGe3okyEZF+7/gItzhoco4BM8pK
 8fQRDXS21WyrOHjrM+/9nKLxieWUYXHbS6XpCg2tfRXgVLZS126jveUYvGqoOiCB
 zx1Jq1AeM4+TceNXO9TRHHa5OC9iP08Wi451ZacHvZerJTDqwZf8DQ==
 -----END RSA PRIVATE KEY-----`,
-    },
-  });
-  await octokit.request('POST /repos/{owner}/{repo}/issues', {
-    owner,
-    repo,
-    title,
-    body,
-  })
+      },
+    });
+    await octokit.request('POST /repos/{owner}/{repo}/issues', {
+      owner,
+      repo,
+      title,
+      body,
+    });
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
 }
 
 module.exports = {
