@@ -1,4 +1,4 @@
-name: hackernews-daily-top
+name: hackernews-weekly-top
 
 on:
   schedule:
@@ -17,5 +17,5 @@ jobs:
       run: npm install --only=prod
       working-directory: .
     - name: fetch
-      run: node scripts/index.js
+      run: node index.js
       working-directory: .
