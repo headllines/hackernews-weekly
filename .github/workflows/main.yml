@@ -19,3 +19,7 @@ jobs:
     - name: fetch
       run: node index.js
       working-directory: .
+      env:
+        clientSecret: ${{ secrets.clientSecret }}
+        privateKey: ${{ secrets.privateKey }}
+        

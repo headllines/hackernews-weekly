@@ -4,7 +4,7 @@
   "description": "Hacker News Daily/Weekly/Monthly headlines",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -u qunit --timeout 5000"
+    "test": "mocha -u qunit --timeout 15000"
   },
   "repository": {
     "type": "git",
