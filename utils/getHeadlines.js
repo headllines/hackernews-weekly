@@ -12,7 +12,9 @@ const getHeadlines = async (date) => {
     const top10Objs = res.data.hits.slice(0, 10);
     const contents = top10Objs
       .map((obj, i) => {
-        const { title, created_at, url, author, points, objectID, num_comments } = obj;
+        let { title, created_at, url, author, points, objectID, num_comments } = obj;
+        if(!url) url = `https://news.ycombinator.com/item?id=${objectID}`;
+
         return `${i + 1}. **[${title}](${url})**
 ${points} points by [${author}](https://news.ycombinator.com/user?id=${author}) ${timeago.format(created_at)} | [${num_comments} comments](https://news.ycombinator.com/item?id=${objectID})
 
