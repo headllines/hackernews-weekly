@@ -21,8 +21,8 @@ const run = async (date) => {
   });
 }
 
-run(new Date());
-
+run(new Date())
+  .catch(err => {throw err});
 // run(dayjs().subtract(3, 'days').toDate());
 // run(dayjs().subtract(10, 'days').toDate());
 // run(dayjs().subtract(17, 'days').toDate());
