@@ -20,7 +20,10 @@ ${points} points by [${author}](https://news.ycombinator.com/user?id=${author}) 
 
 `;
       }).join('');
-    return contents;
+
+        return `${contents}
+<p  align="right"><a href="https://github.com/sponsors/timqian"> <i>❤️ Sponsor the author</i></a> </p>
+`;
   } catch (error) {
     console.log(error);
     throw error
