@@ -22,4 +22,6 @@ jobs:
       env:
         clientSecret: ${{ secrets.clientSecret }}
         privateKey: ${{ secrets.privateKey }}
+    - uses: stefanzweifel/git-auto-commit-action@v4
+
         
