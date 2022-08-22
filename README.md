@@ -1,3 +1,4 @@
+
 # Hacker News Weekly Top 10 posts
 
 [![](https://badgen.net/badge/icon/RSS/orange?icon=rss&label)](http://rsshub.app/github/issue/headllines/hackernews-weekly) 
@@ -46,3 +47,6 @@ We at [headllines.com](https://headllines.com) build open source headline collec
 
 - [timqian](https://github.com/timqian)
 - [leadream](https://github.com/leadream)
+
+> Updated at Mon Aug 22 2022 15:30:06 GMT+0000 (Coordinated Universal Time)
+  
