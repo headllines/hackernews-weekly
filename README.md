@@ -48,5 +48,5 @@ We at [headllines.com](https://headllines.com) build open source headline collec
 - [timqian](https://github.com/timqian)
 - [leadream](https://github.com/leadream)
 
-> Updated at Mon Nov 14 2022 02:10:40 GMT+0000 (Coordinated Universal Time)
+> Updated at Mon Nov 21 2022 02:06:27 GMT+0000 (Coordinated Universal Time)
   
