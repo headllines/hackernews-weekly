@@ -20,7 +20,7 @@
   "dependencies": {
     "@octokit/auth-app": "^2.4.13",
     "@octokit/core": "^3.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "dayjs": "^1.8.32",
     "timeago.js": "^4.0.2"
   },
